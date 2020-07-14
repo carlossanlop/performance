@@ -44,5 +44,8 @@ namespace System.Text.Tests
 
         [Benchmark]
         public int GetByteCount() => _enc.GetByteCount(_chars);
+
+        [Benchmark]
+        public int GetByteCount_IntrinsicsOptimizations() => _enc.GetByteCount("eeeeee\u00E1eeeeeeee");
     }
 }
