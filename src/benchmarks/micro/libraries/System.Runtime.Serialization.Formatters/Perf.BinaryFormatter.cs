@@ -18,6 +18,7 @@ namespace System.Runtime.Serialization.Formatters.Tests
         private Stream _largeListStream;
 
         [GlobalSetup(Target = nameof(DeserializeLargeList))]
+        [Obsolete]
         public void LargeListSetup()
         {
             List<Book> list = Enumerable.Range(0, 100_000).Select(i =>
@@ -32,6 +33,7 @@ namespace System.Runtime.Serialization.Formatters.Tests
         }
 
         [Benchmark]
+        [Obsolete]
         public List<Book> DeserializeLargeList()
         {
             _largeListStream.Position = 0;

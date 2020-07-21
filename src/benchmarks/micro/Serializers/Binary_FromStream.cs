@@ -33,6 +33,7 @@ namespace MicroBenchmarks.Serializers
         }
 
         [GlobalSetup(Target = nameof(BinaryFormatter_))]
+        [Obsolete]
         public void SetupBinaryFormatter()
         {
             memoryStream.Position = 0;
@@ -55,6 +56,7 @@ namespace MicroBenchmarks.Serializers
 
         [BenchmarkCategory(Categories.Libraries)]
         [Benchmark(Description = nameof(BinaryFormatter))]
+        [Obsolete]
         public T BinaryFormatter_()
         {
             memoryStream.Position = 0;

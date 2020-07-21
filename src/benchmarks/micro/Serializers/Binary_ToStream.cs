@@ -34,6 +34,7 @@ namespace MicroBenchmarks.Serializers
 
         [BenchmarkCategory(Categories.Libraries)]
         [Benchmark(Description = nameof(BinaryFormatter))]
+        [Obsolete]
         public void BinaryFormatter_()
         {
             memoryStream.Position = 0;
